@@ -1,0 +1,46 @@
+
+ <link href = "style.css" type = "text/css" rel = "stylesheet" />
+<body>
+ <h1>MONGODB</h1>
+
+ <SECTION class="insert">
+<h2>STORE DATA</h2>
+<form method="post" action="/insert">
+<div class="input">
+<label for="name">Name :</label>
+<input type="text" name="Name" id="Name">
+</div>
+<div class="input">
+<label for="Image">IMAGE :</label>
+<input type="text" name="Image" id="Image">
+</div>
+<div class="input">
+<label for="Summary">Summary : </label>
+<input type="text" name="Summary" id="Summary">
+</div>
+<button type="submit">Insert</button>
+
+</form>
+ </section>
+
+<SECTION class="get">
+  <form method="post" action="/get-data">
+<h2>GET DATA</h2>
+<a href="/get-data">LOAD DATA</a>
+<div>
+ {{# each items}}
+ <article class="items">
+<div> Name  : {{this.Name}}</div>
+<div> IMAGE : {{this.Image}}</div>
+<div> Summary :{{this.Summary}}</div>
+
+ </article>
+
+ {{/each}}
+
+</div>
+
+
+</form>
+</SECTION>
+</body>
